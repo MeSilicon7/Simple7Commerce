@@ -1,0 +1,6 @@
+blank_issues_enabled: false
+contact_links:
+  - name: "Bug Report"
+    url: "/issues/new?template=bug_report.md"
+  - name: "Feature Request"
+    url: "/issues/new?template=feature_request.md"
