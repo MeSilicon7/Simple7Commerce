@@ -6,18 +6,20 @@
   "type": "module",
   "scripts": {
     "build": "remix vite:build",
-    "deploy": "npm run build && wrangler pages deploy",
+    "deploy": "bun run build && wrangler pages deploy",
     "dev": "remix vite:dev",
     "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
     "start": "wrangler pages dev ./build/client",
     "typecheck": "tsc",
     "typegen": "wrangler types",
-    "preview": "npm run build && wrangler pages dev",
+    "preview": "bun run build && wrangler pages dev",
     "cf-typegen": "wrangler types",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "@libsql/client": "^0.14.0",
+    "@prisma/adapter-libsql": "^5.22.0",
     "@prisma/client": "^5.22.0",
     "@remix-run/cloudflare": "^2.14.0",
     "@remix-run/cloudflare-pages": "^2.14.0",
